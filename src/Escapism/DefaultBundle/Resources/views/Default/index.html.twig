@@ -1,0 +1,52 @@
+{% extends "EscapismDefaultBundle:Default:base.html.twig" %}
+{% form_theme form "EscapismDefaultBundle:Default:fields.html.twig" %}
+
+{% block body %}
+    <div id="content" class="site-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="single-image-wrapper">
+                        <img width="681" height="770" src="{{ asset('/bundles/escapismdefault/images/featured-image.png') }}" alt="escapism featured image" class="aligncenter"/>
+                    </div>
+                    <h1>THE MAGAZINE</h1>
+                    <p>Escapism is the largest circulating independent travel magazine in the UK, with 81,988 (ABC verified) copies distributed free throughout London every month.</p>
+                    <p>The magazine takes a fresh look at global travel, featuring inspirational writing from some of the most exciting voices in travel, and photography and design that transports readers from busy London streets to amazing locations across the globe.</p>
+                    <p>In Escapism, we’re as likely to explore the street food scene in Seattle as we are to follow the exploits of a polar explorer, alongside the latest travel gear, news and trends, and guides that help readers see destinations from a new perspective.</p>
+                    <p>We believe there should be more to going on holiday than just packing, getting on a plane and making a beeline for the nearest sunlounger. It should be fun, adventurous and life-changing. That’s why we created Escapism – a magazine for travel lovers, made by travel lovers.</p>
+                    <p>You can view the latest issue online <a href="#">here</a>.</p>
+                    <p>Or browse the whole archive online <a href="#">here</a>.</p>
+                </div>
+                <div class="col-sm-4">
+                    <div class="newsletter">
+                        <div class="single-image-wrapper" id="newsletter-logo">
+                            <img class="aligncenter" width="240" height="60" src="/bundles/escapismdefault/images/escapism-logo.png" alt="escapism logo"/>
+                        </div>
+
+                        <p>Escapism magazine takes a fresh look at global travel, featuring inspirational writing from some of the most exciting voices in travel, and photography and design that transports readers from busy London streets to amazing locations across the globe.</p>
+                        <p style="margin-bottom: 50px;">Sign up for notifications below:</p>
+                        {{ form(form) }}
+                    </div>
+                    <div class="single-image-wrapper" id="mag-cover">
+                        <img class="aligncenter" width="315" height="420" src="/bundles/escapismdefault/images/escapism-cover.png" alt="escapism logo"/>
+                    </div>
+                    <p class="follow-escapism">FOLLOW ESCAPISM ON: <span><a href="#" target="_blank"><img class="alignnone" width="36" height="36" src="/bundles/escapismdefault/images/facebook-icon.png" alt="facebook"/></a> <a href="#" target="_blank"><img class="alignnone" width="36" height="36" src="/bundles/escapismdefault/images/instagram.icon.png" alt="instagram"/></a> <a href="#" target="_blank"><img class="alignnone" width="36" height="36" src="/bundles/escapismdefault/images/twitter-icon.png" alt="twitter"/></a></span></p>
+                </div>
+            </div>
+
+
+            <div class="row" id="bottom">
+                <div class="col-sm-1">
+                    <div class="single_image-wrapper">
+                        <img width="" height="130" src="/bundles/escapismdefault/images/ipad-mag.png" alt="escapism ipad" class="alignleft"/>
+                    </div>
+                </div>
+                <div class="col-sm-11">
+                    <h1>THE IPAD</h1>
+                    <p>Every issue of Escapism is also available in an interactive iPad edition, with even more photography, animated articles, and a range of tools and features that bring the reader even closer to amazing locations throughout the world. Download the iPad edition here.</p>
+                </div>
+            </div>
+        </div><!-- /.container -->
+    </div><!-- #content -->
+
+{% endblock %}

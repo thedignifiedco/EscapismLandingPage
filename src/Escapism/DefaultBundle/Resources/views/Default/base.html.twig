@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- {% block simple_title %}Escapism Magazine{% endblock %} -->
+        <!-- {% block channel_title %}{% endblock %} -->
+        <title>{% block page_title %}Escapism Magazine{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="description" content="{% block meta_description %}{% endblock %}">
+
+        {% block additional_meta %}{% endblock %}
+
+        <!-- Open Graph -->
+        <meta property="og:site_name" content="Escapism"/>
+        <meta property="fb:profile_id" content="1"/>
+        <meta property="og:type" content="{% block og_type %}website{% endblock %}"/>
+        <meta property="og:title" content="{% block og_title %}{{ block('simple_title') }}{% endblock %}"/>
+        <meta property="og:description" content="{% block og_description %}{{ block('meta_description') }}{% endblock %}"/>
+        <meta property="og:url" content="{{ website_hostname }}{{ app.request.getRequestUri() }}"/>
+        {% block og_images %}
+            <meta property="og:image" content="{% block og_image %}{{ asset('images/escapism-cover.png') }}{% endblock %}"/>
+        {% endblock %}
+        {% block additional_og_tags %}{% endblock %}
+
+        <!-- Twitter card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@Escapism">
+        <meta name="twitter:creator" content="@Escapism">
+        <meta name="twitter:title" content="{% block twitter_title %}{{ block('og_title') }}{% endblock %}">
+        <meta name="twitter:description" content="{% block twitter_description %}{{ block('og_description') }}{% endblock %}">
+        <meta name="twitter:image" content="{% block twitter_image %}{{ asset('images/escapism-cover.png') }}{% endblock %}">
+
+        <!-- favicon -->
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+
+        <!-- CSS -->
+
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <link href="/bundles/escapismdefault/css/index.css" rel="stylesheet" type="text/css"/>
+
+        <!-- additional CSS -->
+        {% block additionalcss %}{% endblock %}
+
+    </head>
+    <body class="clearfix {% block bodyclass %}{% endblock %}">
+        {% block header %}{% include "EscapismDefaultBundle:Default:header.html.twig" %}{% endblock %}
+        {% block body %}{% endblock %}
+        {% block footer %}{% include "EscapismDefaultBundle:Default:footer.html.twig" %}{% endblock %}
+
+
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+        <script type="text/javascript" src="{{ asset('/bundles/escapismdefault/js/index.js') }}"></script>
+        {#
+        <!-- scripts -->
+        {% javascripts output= 'js/index.js'
+        'bundles/escapismdefault/js/index.js' %}
+            <script type="text/javascript" src="{{ asset(asset_url) }}"></script>{% endjavascripts %}
+
+#}
+        <!-- additional scripts -->
+        {% block header_scripts %}{% endblock %}
+        {% block footer_javascripts %}{% endblock %}
+        {% block footer_javascript %}{% endblock %}
+
+        {% block admin_bar %}{% if is_granted('ROLE_ADMIN') %}{{ render(controller('EscapismDefaultBundle:Admin:adminbar', {'request': app.request} )) }}{% endif %}{% endblock %}
+    </body>
+</html>

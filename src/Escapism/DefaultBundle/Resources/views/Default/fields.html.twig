@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+
+{%- block form_errors -%}
+    {%- if errors|length > 0 -%}
+        <ul class="form-errors">
+            {%- for error in errors -%}
+                <li>{{ error.message }}</li>
+            {%- endfor -%}
+        </ul>
+    {%- endif -%}
+{%- endblock form_errors -%}
+
+{% block form_row %}
+    {% spaceless %}
+        <tr class="form-row{% if 'choice' in form.vars.block_prefixes %} form-choice-row{% endif %}{% if 'checkbox' in form.vars.block_prefixes %} form-checkbox-row{% endif %}">
+            {% if 'checkbox' in form.vars.block_prefixes %}
+                <th class="form-input">
+                    <div class="form-checkbox-input">
+                        {{ form_label(form) }}{{ form_widget(form) }}
+                    </div>
+                    {{ form_errors(form) }}
+                </th>
+                <td class="form-label">
+                </td>
+            {% else %}
+                <th class="form-label">
+                    {{ form_label(form) }}
+                </th>
+                <td class="form-input">
+                    {{ form_widget(form) }}
+                    {{ form_errors(form) }}
+                </td>
+            {% endif %}
+        </tr>
+    {% endspaceless %}
+{% endblock form_row %}
+
+{%- block button_row -%}
+    <tr class="form-row form-button-row">
+        <td class="clearfix">
+            {{- form_widget(form) -}}
+        </td>
+    </tr>
+{%- endblock button_row -%}
+
+{% block form_widget_compound %}
+    {% spaceless %}
+        <table class="form-table" {{ block('widget_container_attributes') }}>
+            {% if form.parent is empty and errors|length > 0 %}
+                <tr>
+                    <td colspan="2">
+                        {{ form_errors(form) }}
+                    </td>
+                </tr>
+            {% endif %}
+            {{ block('form_rows') }}
+            {{ form_rest(form) }}
+        </table>
+    {% endspaceless %}
+{% endblock form_widget_compound %}
