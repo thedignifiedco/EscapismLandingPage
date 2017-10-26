@@ -39,15 +39,6 @@ footer, header, main, menu, nav {
     display: block;
 }
 
-a {
-    background-color: transparent;
-    text-decoration: none;
-}
-
-a:active, a:hover {
-    outline: 0;
-}
-
 b, strong {
     font-weight: bold;
 }
@@ -324,12 +315,14 @@ input[type="color"]:focus {
 ## Links
 --------------------------------------------------------------*/
 a {
-    color: #ffffff;
+    background-color: transparent;
+    text-decoration: underline;
+    color: #000;
 }
 
-a:hover, a:focus, a:active {
+a:active, a:hover {
+    outline: 0;
 }
-
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
