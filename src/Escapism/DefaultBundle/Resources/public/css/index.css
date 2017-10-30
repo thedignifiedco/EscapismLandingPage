@@ -562,6 +562,15 @@ form a {
     text-decoration: underline;
 }
 
+.flash-notice {
+    margin: 0 15px;
+    padding: 10px 0;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    background: #00b200;
+}
+
 .follow-escapism img {
     margin: 0 4px;
 }

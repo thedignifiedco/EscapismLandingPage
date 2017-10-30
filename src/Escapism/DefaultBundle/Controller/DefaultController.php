@@ -37,14 +37,15 @@ class DefaultController extends Controller {
 		$form->add( 'submit', SubmitType::class, [ 'label' => "Notify me!" ] );
 
 		$form->handleRequest( $request );
-		if ( $form->isSubmitted() && $form->isValid() ) {
+		if ($form->isSubmitted() && $form->isValid()) {
 			$em = $this->getDoctrine()->getManager();
 			$em->persist( $newsletterSignup );
 			$em->flush();
-			$parameters = [
-				'status' => 'success',
-				'html' => $this->renderView("EscapismDefaultBundle:Default:success.html.twig"),
-			];
+			$this->addFlash(
+				'notice',
+				'Thanks for signing up!'
+			);
+			// $this->addFlash() is equivalent to $request->getSession()->getFlashBag()->add()
 		}
 
 		return [

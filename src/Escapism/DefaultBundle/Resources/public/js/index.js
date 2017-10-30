@@ -69,21 +69,6 @@ $(function validateNewsletterForm() {
                 $(element).removeClass("error");
             }
             $(element).parents('.form-row').removeClass('error');
-        },
-        submitHandler: function (form) {
-            $(form).hide();
-            $.ajax({
-                type: $(form).attr('method'),
-                url: $(form).attr('action'),
-                data: $(form).serialize(),
-                dataType: 'json',
-                success: function (response) {
-                    $('#newsletter-signup').html(response.html);
-                    if ('error' === response.status) {
-                        validateNewsletterForm();
-                    }
-                }
-            });
         }
     });
 });
