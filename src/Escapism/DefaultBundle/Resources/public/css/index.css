@@ -466,7 +466,7 @@ div#newsletter-logo.single-image-wrapper {
 }
 
 div#mag-cover.single-image-wrapper {
-    margin: 130px 15px 0 -15px;
+    margin: 110px 15px 0 -15px;
 }
 
 #newsletter_signup {
@@ -482,18 +482,46 @@ div#mag-cover.single-image-wrapper {
     color: #000000;
 }
 
-input {
+input[type="text"] {
     height: 30px;
     float: right;
 }
 
 input[type="checkbox"] {
-    width: 30px;
-    height: 30px;
+    float: right;
+    height: 28px;
+    width: 22px;
+}
+
+input#newsletter_signup_termsConditions:checked:before {
+    display: inline-block;
+    content: "\2714";
+    border-radius: 36px;
     background: #fff;
+    border: 2px solid #d2d2d2;
+    font-size: 1.5em;
+    line-height: 1.2em;
+    width: 36px;
+    height: 36px;
+    padding: 0px 0 0 6px;
+    margin: -3px 0 0 -12px;
+    cursor: pointer;
+}
+
+input#newsletter_signup_termsConditions:not(:checked):before {
+    display: inline-block;
+    content: "\2714";
     color: #fff;
-    position: relative;
-    border-radius: 50%;
+    border-radius: 36px;
+    background: #fff;
+    border: 2px solid #d2d2d2;
+    font-size: 1.5em;
+    line-height: 1.2em;
+    width: 36px;
+    height: 36px;
+    padding: 0px 0 0 6px;
+    margin: -3px 0 0 -12px;
+    cursor: pointer;
 }
 
 form {
@@ -509,6 +537,10 @@ form {
     padding: 0;
     margin: 5px 0;
     color: #000;
+}
+
+label[for="newsletter_signup_termsConditions"] {
+    font-size: 1em;
 }
 
 .form-table label.error, ul.form-errors {

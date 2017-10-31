@@ -38,7 +38,8 @@ class NewsletterSignupType extends AbstractType {
 		        ->add( 'termsConditions', CheckboxType::class, array(
 			        'label'    => 'I agree to the terms and conditions:',
 			        'required' => 'true',
-			        'data' => true, ) );
+			        'data' => true,
+			        ) );
 	}
 
 	/**
