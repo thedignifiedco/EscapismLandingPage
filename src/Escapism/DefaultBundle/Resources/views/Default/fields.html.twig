@@ -15,13 +15,14 @@
     {% spaceless %}
         <tr class="form-row{% if 'choice' in form.vars.block_prefixes %} form-choice-row{% endif %}{% if 'checkbox' in form.vars.block_prefixes %} form-checkbox-row{% endif %}">
             {% if 'checkbox' in form.vars.block_prefixes %}
-                <th class="form-input">
-                    <div class="form-checkbox-input">
-                        {{ form_label(form) }}{{ form_widget(form) }}
-                    </div>
+                <th class="form-label">
+                    {{ form_label(form) }}
                     {{ form_errors(form) }}
                 </th>
-                <td class="form-label">
+                <td class="form-input">
+                    <div class="form-checkbox-input">
+                        {{ form_widget(form) }}
+                    </div>
                 </td>
             {% else %}
                 <th class="form-label">

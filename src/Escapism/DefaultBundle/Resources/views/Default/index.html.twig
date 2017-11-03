@@ -26,20 +26,7 @@
                         <p>Escapism magazine takes a fresh look at global travel, featuring inspirational writing from some of the most exciting voices in travel, and photography and design that transports readers from busy London streets to amazing locations across the globe.</p>
                         <p style="margin-bottom: 50px;">Sign up for notifications below:</p>
 
-                        {% for flash_message in app.session.flashBag.get('notice') %}
-                            <div class="flash-notice">
-                                {{ flash_message }}
-                            </div>
-                        {% endfor %}
-
-                        {# ...or you can read and display every flash message available #}
-                        {% for type, flash_messages in app.session.flashBag.all %}
-                            {% for flash_message in flash_messages %}
-                                <div class="flash-{{ type }}">
-                                    {{ flash_message }}
-                                </div>
-                            {% endfor %}
-                        {% endfor %}
+                        <p id="msg" class=""></p>
 
                         {{ form(form) }}
                     </div>

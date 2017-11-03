@@ -1,5 +1,4 @@
 $(function () {
-    "use strict";
     $("#menu").on("click", function (e) {
         e.preventDefault();
         $("nav.blog-nav").toggleClass("active");
@@ -8,38 +7,38 @@ $(function () {
     $("a", "li").on("click", function (e) {
         $("nav.blog-nav").removeClass("active");
     });
-});
 
-$(function validateNewsletterForm() {
     $("input").blur(function () {
         $(this).valid();
     }).change(function () {
         $(this).valid();
     });
 
-    $("#newsletter_signup").validate({
+    $("#newsletter-signup-form").validate({
         rules: {
             "newsletter_signup[firstName]": "required",
-            "newsletter_signup[lastName]": "required",
+            "newsletter_signup[surname]": "required",
             "newsletter_signup[email]": {
                 required: true,
                 email: true
-            }
+            },
+            "newsletter_signup[termsConditions]": "required"
         },
         messages: {
             "newsletter_signup[firstName]": "Required",
-            "newsletter_signup[lastName]": "Required",
+            "newsletter_signup[surname]": "Required",
             "newsletter_signup[email]": {
                 required: "Required",
                 email: "Please enter a valid email address"
-            }
+            },
+            "newsletter_signup[termsConditions]": "You must accept our terms & conditions"
         },
         errorPlacement: function (error, element) {
             if (element.is(":radio")) {
                 error.appendTo(element.parent().parent());
             }
             else if (element.is(":checkbox")) {
-                error.appendTo(element.parent().next());
+                error.appendTo(element.parents('.form-row.form-checkbox-row'));
             }
             else {
                 error.insertAfter(element);
@@ -51,7 +50,7 @@ $(function validateNewsletterForm() {
                 $(element).parent().addClass("error");
             }
             else if ($(element).is(":checkbox")) {
-                // $(element).parent().addClass("error");
+                $(element).parent().addClass("error");
             }
             else {
                 $(element).addClass("error");
@@ -63,12 +62,35 @@ $(function validateNewsletterForm() {
                 $(element).parent().removeClass("error");
             }
             else if ($(element).is(":checkbox")) {
-                // $(element).parent().removeClass("error");
+                $(element).parent().removeClass("error");
             }
             else {
                 $(element).removeClass("error");
             }
             $(element).parents('.form-row').removeClass('error');
+        },
+        submitHandler: function (form) {
+            var $url = $(form).attr('action');
+            var $method = $(form).attr('method');
+            var $data = $(form).serialize();
+            var jqxhr = $.ajax({
+                type: $method,
+                url: $url,
+                data: $data,
+                dataType: 'json',
+                success: function (response) {
+                    if ('success' === response.status) {
+                        $('form').hide();
+                        $('#msg').addClass('success').html(response.message).fadeIn('slow');
+                    } else {
+                        $('#msg').addClass('error').html(response.message).delay(5000).fadeOut('slow');
+                    }
+                }
+            });
+
+            jqxhr.always(function (response) {
+                console.log(response)
+            })
         }
-    });
+    })
 });

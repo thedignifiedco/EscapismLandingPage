@@ -503,7 +503,7 @@ input#newsletter_signup_termsConditions:checked:before {
     line-height: 1.2em;
     width: 36px;
     height: 36px;
-    padding: 0px 0 0 6px;
+    padding: 0 0 0 6px;
     margin: -3px 0 0 -12px;
     cursor: pointer;
 }
@@ -519,7 +519,7 @@ input#newsletter_signup_termsConditions:not(:checked):before {
     line-height: 1.2em;
     width: 36px;
     height: 36px;
-    padding: 0px 0 0 6px;
+    padding: 0 0 0 6px;
     margin: -3px 0 0 -12px;
     cursor: pointer;
 }
@@ -571,8 +571,22 @@ tr.form-row.form-checkbox-row {
 }
 
 tr.form-row.form-checkbox-row th {
-    width: 100%;
+    width: 80%;
     text-align: left;
+}
+
+tr.form-row.form-checkbox-row td {
+    width: 20%;
+}
+
+label[for="newsletter_signup_termsConditions"] {
+    font-size: 1em;
+    line-height: 2em;
+}
+
+tr.form-row.form-checkbox-row .error {
+    margin-top: -10px;
+    padding-bottom: 10px;
 }
 
 tr.form-row.form-button-row td {
@@ -594,13 +608,23 @@ form a {
     text-decoration: underline;
 }
 
-.flash-notice {
+#msg.success {
     margin: 0 15px;
     padding: 10px 0;
-    color: #fff;
     text-transform: uppercase;
     text-align: center;
     background: #00b200;
+    color: #ffffff;
+
+}
+
+#msg.error {
+    margin: 0 15px;
+    padding: 10px 0;
+    text-align: center;
+    background: #ff0000;
+    color: #ffffff;
+    font-size: 1em;
 }
 
 .follow-escapism img {
