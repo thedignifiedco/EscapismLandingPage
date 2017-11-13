@@ -168,7 +168,13 @@ p.follow-escapism span {
 }
 
 h1.site-title {
-    display: none;
+    margin: 0 auto;
+    font-size: 0;
+    line-height: 0;
+    width: 215px;
+    height: 90px;
+    background: url('/bundles/escapismdefault/images/squareup-logo.png') center center no-repeat;
+    background-size: contain;
 }
 
 .newsletter p {
@@ -366,6 +372,10 @@ a:active, a:hover {
 
 .main-navigation ul ul a {
     width: 200px;
+}
+
+div#site-navigation {
+    background: url('/bundles/escapismdefault/images/nav-bg.png') #000 top right no-repeat;
 }
 
 nav.blog-nav {

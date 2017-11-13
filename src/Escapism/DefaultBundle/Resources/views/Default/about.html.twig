@@ -1,0 +1,30 @@
+{% extends "EscapismDefaultBundle:Default:base.html.twig" %}
+
+{% block additionalcss %}
+    <link href="/bundles/escapismdefault/css/about.css" rel="stylesheet" type="text/css"/>
+{% endblock %}
+
+{% block body %}
+    <div id="content" class="site-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="single-image-wrapper">
+                        <img src="{{ asset('/bundles/escapismdefault/images/about-us.jpeg') }}" alt="About Escapism" class="aligncenter"/>
+                    </div>
+                </div>
+
+                <div class="col-sm-2"></div>
+
+                <div id="about" class="col-sm-8">
+                    <h1>About Escapism</h1>
+                    <p>Square Up Media is one of London’s leading luxury and lifestyle media houses. With nearly 15 years’ experience creating captivating content, we are experts at communicating and engaging with our audiences via award-winning magazines, websites, newsletters and events. We believe in making products that are as exciting as they are interesting – and, best of all, offering them to our readers for free.</p>
+                    <p>For more information, visit our website - <a href="//squareupmedia.com/" target="_blank">squareupmedia.com</a>.</p>
+                </div>
+
+                <div class="col-sm-2"></div>
+            </div>
+        </div><!-- /.container -->
+    </div><!-- #content -->
+
+{% endblock %}

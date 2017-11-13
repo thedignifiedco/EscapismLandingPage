@@ -1,0 +1,45 @@
+div#site-navigation {
+    background: #000;
+}
+
+.col-sm-12 .single-image-wrapper {
+    margin: 0 -15px 0 -15px;
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 60%, rgba(238,238,239,0.3) 100%);
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 60%,rgba(238,238,239,0.3) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 60%,rgba(238,238,239,0.3) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#4deeeeef',GradientType=0 );
+}
+
+.col-sm-12 .single-image-wrapper img {
+    border-radius: 0 0 40% 0;
+}
+
+.col-sm-8 {
+    padding-bottom: 20px;
+    border-bottom: none;
+}
+
+#about h1 {
+    font-size: 0;
+    line-height: 0;
+    width: 173px;
+    height: 40px;
+    background: url('/bundles/escapismdefault/images/escapism-logo.png') top center no-repeat;
+    background-size: contain;
+    margin: 30px auto 10px;
+}
+
+#about p {
+    text-align: center;
+}
+
+@media only screen and (max-width: 1023px) {
+    .col-sm-12 .single-image-wrapper img {
+        border-radius: 40% 0 40% 0;
+    }
+
+    .col-sm-8 {
+        padding-bottom: 20px;
+        border-bottom: none;
+    }
+}
