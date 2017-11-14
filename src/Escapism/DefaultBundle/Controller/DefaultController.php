@@ -112,9 +112,7 @@ class DefaultController extends Controller {
 	 * @return array|Response
 	 */
 	public function brandsAction() {
-		$em = $this->getDoctrine()->getManager();
-		$ourbrands = $em->getRepository('EscapismCpBundle:Brand')->findBy(['active' => true], ['position' => 'ASC']);
 
-		return ['ourbrands' => $ourbrands];
+		return [];
 	}
 }
