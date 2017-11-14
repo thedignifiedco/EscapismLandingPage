@@ -11,6 +11,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Response;
 
 /**
  * Class DefaultController
@@ -80,5 +81,40 @@ class DefaultController extends Controller {
 
 		return $form;
 
+	}
+
+	/**
+	 * @Route("/about", name="About")
+	 * @Template()
+	 *
+	 * @return array|Response
+	 */
+	public function aboutAction() {
+
+		return [];
+	}
+
+	/**
+	 * @Route("/contact", name="Contact")
+	 * @Template()
+	 *
+	 * @return array|Response
+	 */
+	public function contactAction() {
+
+		return [];
+	}
+
+	/**
+	 * @Route("/brands", name="Brands")
+	 * @Template()
+	 *
+	 * @return array|Response
+	 */
+	public function brandsAction() {
+		$em = $this->getDoctrine()->getManager();
+		$ourbrands = $em->getRepository('EscapismCpBundle:Brand')->findBy(['active' => true], ['position' => 'ASC']);
+
+		return ['ourbrands' => $ourbrands];
 	}
 }

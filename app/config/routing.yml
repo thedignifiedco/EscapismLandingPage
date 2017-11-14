@@ -1,3 +1,7 @@
+escapism_cp:
+    resource: "@EscapismCpBundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
     resource: '@EscapismDefaultBundle/Controller/DefaultController.php'
     type: annotation

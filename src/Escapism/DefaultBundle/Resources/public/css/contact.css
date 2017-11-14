@@ -1,0 +1,36 @@
+div#site-navigation {
+    background: #000;
+}
+
+.col-sm-12 .single-image-wrapper {
+    margin: 0 -15px 0 -15px;
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 60%, rgba(238,238,239,0.3) 100%);
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 60%,rgba(238,238,239,0.3) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 60%,rgba(238,238,239,0.3) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#4deeeeef',GradientType=0 );
+}
+
+.single-image-wrapper .placeholder {
+    border-radius: 0 0 40% 0;
+    width: 100%;
+    height: 400px;
+    background: url('/bundles/escapismdefault/images/contact-header.jpg') center center no-repeat;
+    background-size: cover;
+    margin: 0 0 50px;
+}
+
+.col-sm-4 {
+    padding-bottom: 20px;
+    border-bottom: none;
+}
+
+@media only screen and (max-width: 1023px) {
+    .single-image-wrapper .placeholder {
+        border-radius: 40% 0 40% 0;
+    }
+
+    .col-sm-4 {
+        padding-bottom: 20px;
+        border-bottom: none;
+    }
+}
