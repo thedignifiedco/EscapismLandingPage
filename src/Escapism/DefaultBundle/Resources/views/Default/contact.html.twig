@@ -1,4 +1,5 @@
 {% extends "EscapismDefaultBundle:Default:base.html.twig" %}
+{% form_theme form "EscapismDefaultBundle:Default:fields.html.twig" %}
 
 {% block additionalcss %}
     <link href="/bundles/escapismdefault/css/contact.css" rel="stylesheet" type="text/css"/>
@@ -12,25 +13,37 @@
                     <div class="single-image-wrapper">
                         <div class="placeholder"></div>
                     </div>
+
+                    <div id="contact" class="col-sm-4">
+                        <h2>Address</h2>
+                        <p><a href="https://goo.gl/maps/Ge21CopCuKn" target="_blank">Square Up Media<br/>5 Tun Yard<br/>Peardon Street<br/>London<br/>SW8 3HT</a></p>
+                    </div>
+
+                    <div id="about" class="col-sm-4">
+                        <h2>Telephone</h2>
+                        <p><a href="tel:+442078199999" target="_blank">+44 (0) 20 7819 9999</a></p>
+                        <h2>Email</h2>
+                        <p><a href="mailto:info@squareupgroup.com" target="_blank">info@squareupgroup.com</a></p>
+                    </div>
+
+                    {{ form(form) }}
                 </div>
-
-                <div class="col-sm-2"></div>
-
-                <div id="contact" class="col-sm-4">
-                    <h2>Address</h2>
-                    <p><a href="https://goo.gl/maps/Ge21CopCuKn" target="_blank">Square Up Media<br/>5 Tun Yard<br/>Peardon Street<br/>London<br/>SW8 3HT</a></p>
+                <div class="col-sm-4">
+                    {% include "EscapismDefaultBundle:Default:sidebar.html.twig" %}
                 </div>
+            </div>
 
-                <div id="about" class="col-sm-4">
-                    <h2>Telephone</h2>
-                    <p><a href="tel:+442078199999" target="_blank">+44 (0) 20 7819 9999</a></p>
-                    <h2>Email</h2>
-                    <p><a href="mailto:info@squareupgroup.com" target="_blank">info@squareupgroup.com</a></p>
+            <div class="row" id="bottom">
+                <div class="col-sm-1">
+                    <div class="single_image-wrapper">
+                        <img width="" height="130" src="/bundles/escapismdefault/images/ipad-mag.png" alt="escapism ipad" class="alignleft"/>
+                    </div>
                 </div>
-
-                <div class="col-sm-2"></div>
+                <div class="col-sm-11">
+                    <h1>THE IPAD</h1>
+                    <p>Every issue of Escapism is also available in an interactive iPad edition, with even more photography, animated articles, and a range of tools and features that bring the reader even closer to amazing locations throughout the world. Download the iPad edition here.</p>
+                </div>
             </div>
         </div><!-- /.container -->
     </div><!-- #content -->
-
 {% endblock %}

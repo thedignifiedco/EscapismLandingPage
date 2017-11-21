@@ -1,28 +1,59 @@
 {% extends "EscapismDefaultBundle:Default:base.html.twig" %}
 
 {% block additionalcss %}
-    <link href="/bundles/escapismdefault/css/about.css" rel="stylesheet" type="text/css"/>
+    <link href="/bundles/escapismdefault/css/brands.css" rel="stylesheet" type="text/css"/>
 {% endblock %}
 
 {% block body %}
     <div id="content" class="site-content">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12">
-                    <div class="single-image-wrapper">
-                        <img src="{{ asset('/bundles/escapismdefault/images/about-us.jpeg') }}" alt="About Escapism" class="aligncenter"/>
+                <div id="brands" class="col-sm-12">
+                    <h1>Our Brands</h1>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="magazine-cover" id="squaremile">
+                                <img src="{{ asset('/bundles/escapismdefault/images/squaremile-cover.jpeg') }}" alt="" width="600" height="799" class="aligncenter" />
+                                <div class="cover-overlay">
+                                    <h3>Square Mile</h3>
+                                    <p>The City's number one monthly magazine, covering everything from style, luxury and investments. Square Mile is London's only luxury lifestyle magazine worth reading.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="magazine-cover" id="hedge">
+                                <img src="{{ asset('/bundles/escapismdefault/images/hedge-cover.jpeg') }}" alt="" width="600" height="799" class="aligncenter" />
+                                <div class="cover-overlay">
+                                    <h3>Hedge</h3>
+                                    <p>For the last seven years, HEDGE has been the leading lifestyle magazine for the investment management industry, with its roots in the hedge fund world.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="magazine-cover" id="escapism">
+                                <img src="{{ asset('/bundles/escapismdefault/images/escapism-cover.jpeg') }}" alt="" width="600" height="799" class="aligncenter" />
+                                <div class="cover-overlay">
+                                    <h3>Escapism</h3>
+                                    <p>Escapism is the free, monthly travel title that takes readers away from urban life and transports them around the globe; from close-to-home hideaways to far-flung tropical escapes.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="magazine-cover" id="foodism">
+                                <img src="{{ asset('/bundles/escapismdefault/images/foodism-cover.jpeg') }}" alt="" width="600" height="799" class="aligncenter" />
+                                <div class="cover-overlay">
+                                    <h3>Foodism</h3>
+                                    <p>The capital's largest food and drink mag. It's London, one bite at a time. Distributed free at Zones 1-2 Tube stations.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="col-sm-2"></div>
-
-                <div id="about" class="col-sm-8">
-                    <h1>About Escapism</h1>
-                    <p>Square Up Media is one of London’s leading luxury and lifestyle media houses. With nearly 15 years’ experience creating captivating content, we are experts at communicating and engaging with our audiences via award-winning magazines, websites, newsletters and events. We believe in making products that are as exciting as they are interesting – and, best of all, offering them to our readers for free.</p>
-                    <p>For more information, visit our website - <a href="//squareupmedia.com/" target="_blank">squareupmedia.com</a>.</p>
-                </div>
-
-                <div class="col-sm-2"></div>
             </div>
         </div><!-- /.container -->
     </div><!-- #content -->

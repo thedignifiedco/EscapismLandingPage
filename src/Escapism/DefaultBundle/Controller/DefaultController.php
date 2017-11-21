@@ -90,8 +90,12 @@ class DefaultController extends Controller {
 	 * @return array|Response
 	 */
 	public function aboutAction() {
+		$newsletterSignup = new NewsletterSignup();
+		$form             = $this->createNewsletterSignupForm( $newsletterSignup );
 
-		return [];
+		return [
+				'form' => $form->createView(),
+		];
 	}
 
 	/**
@@ -101,8 +105,12 @@ class DefaultController extends Controller {
 	 * @return array|Response
 	 */
 	public function contactAction() {
+		$newsletterSignup = new NewsletterSignup();
+		$form             = $this->createNewsletterSignupForm( $newsletterSignup );
 
-		return [];
+		return [
+			'form' => $form->createView(),
+		];
 	}
 
 	/**
@@ -112,7 +120,11 @@ class DefaultController extends Controller {
 	 * @return array|Response
 	 */
 	public function brandsAction() {
+		$newsletterSignup = new NewsletterSignup();
+		$form             = $this->createNewsletterSignupForm( $newsletterSignup );
 
-		return [];
+		return [
+			'form' => $form->createView(),
+		];
 	}
 }
