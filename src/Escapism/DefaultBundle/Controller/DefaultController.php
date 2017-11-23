@@ -60,13 +60,13 @@ class DefaultController extends Controller {
 			$em->persist( $newsletterSignup );
 			$em->flush();
 			$parameters = [
-				'status' => 'success',
-				'message' => 'Thanks for signing up!'
+				'status'  => 'success',
+				'message' => 'Thanks for signing up!',
 			];
 		} else {
 			$parameters = [
-				'status' => 'error',
-				'message' => 'This email has been used!'
+				'status'  => 'error',
+				'message' => 'This email has been used!',
 			];
 		}
 
@@ -108,7 +108,7 @@ class DefaultController extends Controller {
 	 */
 	public function contactAction() {
 		$enquiry = new Enquiry();
-		$form             = $this->createEnquiryForm( $enquiry );
+		$form    = $this->createEnquiryForm( $enquiry );
 
 		return [
 			'form' => $form->createView(),
@@ -128,38 +128,32 @@ class DefaultController extends Controller {
 	 */
 	public function enquirysubmitAction( Request $request ) {
 		$enquiry = new Enquiry();
-		$form             = $this->createEnquiryForm( $enquiry );
+		$form    = $this->createEnquiryForm( $enquiry );
 
 		$form->handleRequest( $request );
-		if ( $form->isSubmitted() && $form->isValid() ) {
-			$name = $form['name']->getData();
-			$email = $form['email']->getData();
-			$subject = $form['subject']->getData();
-			$usermessage = $form['usermessage']->getData();
-
-			# set form data
-
-			$enquiry->setName($name);
-			$enquiry->setEmail($email);
-			$enquiry->setSubject($subject);
-			$enquiry->setUsermessage($usermessage);
-
+		if ( $form->isValid() ) {
 			$message = \Swift_Message::newInstance()
-			                         ->setSubject($subject)
-			                         ->setFrom($email)
-			                         ->setTo('enquiry@squareupmedia.com')
-			                         ->setBody($usermessage, array('name' => $name));
+			                         ->setSubject( $enquiry->getSubject() )
+			                         ->setFrom( $enquiry->getEmail() )
+			                         ->setTo( 'dignified.sorinolu-bimpe@squaremile.com' )
+			                         ->setBody( $enquiry->getUsermessage() );
 
-			$this->get('mailer')->send($message);
+			$result = $this->get( 'mailer.service' )->send( $message );
 
 			$parameters = [
-				'status' => 'success',
-				'message' => 'Thanks for your enquiry!'
+				'status'  => 'success',
+				'message' => 'Thanks for your enquiry!',
+				'result'  => $result,
 			];
 		} else {
+			$errors  = $form->getErrors();
+			$message = 'Your message failed!';
+			foreach ( $errors as $error ) {
+				$message .= "\n" . $error->getMessage();
+			}
 			$parameters = [
-				'status' => 'error',
-				'message' => 'Your message failed!'
+				'status'  => 'error',
+				'message' => $message,
 			];
 		};
 
