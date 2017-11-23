@@ -3,6 +3,7 @@
 
 {% block additionalcss %}
     <link href="/bundles/escapismdefault/css/contact.css" rel="stylesheet" type="text/css"/>
+    <link href="/bundles/escapismdefault/css/forms.css" rel="stylesheet" type="text/css"/>
 {% endblock %}
 
 {% block body %}
@@ -11,26 +12,33 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="single-image-wrapper">
-                        <div class="placeholder"></div>
+                        <div class="placeholder"><h1>CONTACT</h1></div>
                     </div>
+                </div>
+            </div>
 
-                    <div id="contact" class="col-sm-4">
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-5">
+                    <div id="contact">
                         <h2>Address</h2>
                         <p><a href="https://goo.gl/maps/Ge21CopCuKn" target="_blank">Square Up Media<br/>5 Tun Yard<br/>Peardon Street<br/>London<br/>SW8 3HT</a></p>
-                    </div>
 
-                    <div id="about" class="col-sm-4">
                         <h2>Telephone</h2>
                         <p><a href="tel:+442078199999" target="_blank">+44 (0) 20 7819 9999</a></p>
                         <h2>Email</h2>
                         <p><a href="mailto:info@squareupgroup.com" target="_blank">info@squareupgroup.com</a></p>
                     </div>
+                </div>
 
+                <div id="about" class="col-sm-5">
+                    <h2>Enquiry Form</h2>
+                    <p>Send us a direct message using the form below, and memeber of our team will get in touch with you shortly.</p>
+
+                    <p id="msg" class=""></p>
                     {{ form(form) }}
                 </div>
-                <div class="col-sm-4">
-                    {% include "EscapismDefaultBundle:Default:sidebar.html.twig" %}
-                </div>
+                <div class="col-sm-1"></div>
             </div>
 
             <div class="row" id="bottom">

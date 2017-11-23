@@ -2,7 +2,9 @@
 
 namespace Escapism\DefaultBundle\Controller;
 
+use Escapism\DefaultBundle\Entity\Enquiry;
 use Escapism\DefaultBundle\Entity\NewsletterSignup;
+use Escapism\DefaultBundle\Form\EnquiryType;
 use Escapism\DefaultBundle\Form\NewsletterSignupType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -90,27 +92,90 @@ class DefaultController extends Controller {
 	 * @return array|Response
 	 */
 	public function aboutAction() {
-		$newsletterSignup = new NewsletterSignup();
-		$form             = $this->createNewsletterSignupForm( $newsletterSignup );
 
-		return [
-				'form' => $form->createView(),
-		];
+		return [];
 	}
 
 	/**
+	 * Contact action
+	 *
 	 * @Route("/contact", name="Contact")
 	 * @Template()
 	 *
-	 * @return array|Response
+	 * @Method("GET")
+	 *
+	 * @return Response|array
 	 */
 	public function contactAction() {
-		$newsletterSignup = new NewsletterSignup();
-		$form             = $this->createNewsletterSignupForm( $newsletterSignup );
+		$enquiry = new Enquiry();
+		$form             = $this->createEnquiryForm( $enquiry );
 
 		return [
 			'form' => $form->createView(),
 		];
+	}
+
+
+	/**
+	 * Contact action
+	 *
+	 * @Route("/contact", name="enquirysubmit")
+	 * @Method("POST")
+	 *
+	 * @param Request $request
+	 *
+	 * @return JsonResponse|array
+	 */
+	public function enquirysubmitAction( Request $request ) {
+		$enquiry = new Enquiry();
+		$form             = $this->createEnquiryForm( $enquiry );
+
+		$form->handleRequest( $request );
+		if ( $form->isSubmitted() && $form->isValid() ) {
+			$name = $form['name']->getData();
+			$email = $form['email']->getData();
+			$subject = $form['subject']->getData();
+			$usermessage = $form['usermessage']->getData();
+
+			# set form data
+
+			$enquiry->setName($name);
+			$enquiry->setEmail($email);
+			$enquiry->setSubject($subject);
+			$enquiry->setUsermessage($usermessage);
+
+			$message = \Swift_Message::newInstance()
+			                         ->setSubject($subject)
+			                         ->setFrom($email)
+			                         ->setTo('enquiry@squareupmedia.com')
+			                         ->setBody($usermessage, array('name' => $name));
+
+			$this->get('mailer')->send($message);
+
+			$parameters = [
+				'status' => 'success',
+				'message' => 'Thanks for your enquiry!'
+			];
+		} else {
+			$parameters = [
+				'status' => 'error',
+				'message' => 'Your message failed!'
+			];
+		};
+
+		return new JsonResponse( $parameters );
+	}
+
+	private function createEnquiryForm( Enquiry $enquiry ) {
+		$form = $this->createForm( EnquiryType::class, $enquiry, [
+			'action' => $this->generateUrl( 'enquirysubmit' ),
+			'method' => "POST",
+			'attr'   => [ 'id' => 'enquiry-form' ],
+		] );
+		$form->add( 'submit', SubmitType::class, [ 'label' => "Send" ] );
+
+		return $form;
+
 	}
 
 	/**
@@ -120,11 +185,7 @@ class DefaultController extends Controller {
 	 * @return array|Response
 	 */
 	public function brandsAction() {
-		$newsletterSignup = new NewsletterSignup();
-		$form             = $this->createNewsletterSignupForm( $newsletterSignup );
 
-		return [
-			'form' => $form->createView(),
-		];
+		return [];
 	}
 }

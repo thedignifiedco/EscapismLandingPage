@@ -1,0 +1,238 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    border: 1px solid;
+    border-color: #ccc #ccc #bbb;
+    border-radius: 3px;
+    background: #e6e6e6;
+    color: rgba(0, 0, 0, .8);
+    font-size: 0.75rem;
+    line-height: 1;
+    padding: .6em 1em .4em;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+    border-color: #ccc #bbb #aaa;
+}
+
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+    border-color: #aaa #bbb #bbb;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+    color: #666;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 3px;
+    width: 100%;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus {
+    color: #111;
+}
+
+#newsletter_signup {
+    margin: 0 0 1.5em;
+}
+
+#newsletter_signup div {
+    text-align: left;
+    padding: 0;
+    margin: 5px 0;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1em;
+    color: #000000;
+}
+
+input[type="text"] {
+    height: 30px;
+    float: right;
+}
+
+input[type="checkbox"] {
+    float: right;
+    height: 28px;
+    width: 22px;
+}
+
+input#newsletter_signup_termsConditions:checked:before, input#enquiry_spamCheck:checked:before {
+    display: inline-block;
+    content: "\2714";
+    border-radius: 36px;
+    background: #fff;
+    border: 2px solid #d2d2d2;
+    font-size: 1.5em;
+    line-height: 1.2em;
+    width: 36px;
+    height: 36px;
+    padding: 0 0 0 6px;
+    margin: -3px 0 0 -12px;
+    cursor: pointer;
+}
+
+input#newsletter_signup_termsConditions:not(:checked):before, input#enquiry_spamCheck:not(:checked):before {
+    display: inline-block;
+    content: "\2714";
+    color: #fff;
+    border-radius: 36px;
+    background: #fff;
+    border: 2px solid #d2d2d2;
+    font-size: 1.5em;
+    line-height: 1.2em;
+    width: 36px;
+    height: 36px;
+    padding: 0 0 0 6px;
+    margin: -3px 0 0 -12px;
+    cursor: pointer;
+}
+
+form {
+    margin: 0 15px;
+}
+
+.form-table label {
+    font-family: 'Oswald', sans-serif;
+    font-weight: normal;
+    font-size: 1.2em;
+    line-height: 1.2em;
+    text-align: left;
+    padding: 0;
+    margin: 5px 0;
+    color: #000;
+}
+
+label[for="newsletter_signup_termsConditions"], label[for="enquiry_spamCheck"] {
+    font-size: 1em;
+}
+
+.form-table label.error, ul.form-errors {
+    margin: 0;
+    padding: 0;
+    color: #ff0000;
+    font-size: 0.8em;
+    list-style: none;
+}
+
+tr.form-row {
+    margin: 0;
+    flex-wrap: nowrap;
+}
+
+th.form-label {
+    width: 35%;
+    display: table-row;
+}
+
+td.form-input {
+    width: 65%;
+    display: table-row;
+}
+
+tr.form-row.form-checkbox-row {
+    flex-wrap: wrap;
+}
+
+tr.form-row.form-checkbox-row th {
+    width: 80%;
+    text-align: left;
+}
+
+tr.form-row.form-checkbox-row td {
+    width: 20%;
+}
+
+label[for="newsletter_signup_termsConditions"], label[for="enquiry_spamCheck"] {
+    font-size: 1em;
+    line-height: 2em;
+}
+
+tr.form-row.form-checkbox-row .error {
+    margin-top: -10px;
+    padding-bottom: 10px;
+}
+
+tr.form-row.form-button-row td {
+    width: 100%;
+}
+
+button, input#submit {
+    background: #000;
+    width: 100%;
+    color: #fff;
+    font-size: 1.2em;
+    font-family: 'Oswald', sans-serif;
+    line-height: 1.6em;
+    padding: 0;
+}
+
+form a {
+    color: #000;
+    text-decoration: underline;
+}
+
+#msg.success {
+    margin: 0 15px;
+    padding: 10px 0;
+    text-transform: uppercase;
+    text-align: center;
+    background: #00b200;
+    color: #ffffff;
+
+}
+
+#msg.error {
+    margin: 0 15px;
+    padding: 10px 0;
+    text-align: center;
+    background: #ff0000;
+    color: #ffffff;
+    font-size: 1em;
+}
+
+@media only screen and (max-width: 1023px) {
+    form#contactus_form {
+        margin-top: -30px;
+        padding-bottom: 80px;
+        border-bottom: 1px solid #d2d2d2;
+    }
+}

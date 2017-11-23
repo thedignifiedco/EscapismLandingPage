@@ -92,5 +92,87 @@ $(function () {
                 console.log(response)
             })
         }
+    });
+
+    $("#enquiry-form").validate({
+        rules: {
+            "enquiry[name]": "required",
+            "enquiry[subject]": "required",
+            "enquiry[email]": {
+                required: true,
+                email: true
+            },
+            "enquiry[usermessage]": "required",
+            "enquiry[spamCheck]": "required"
+        },
+        messages: {
+            "enquiry[name]": "Required",
+            "enquiry[subject]": "Required",
+            "enquiry[email]": {
+                required: "Required",
+                email: "Please enter a valid email address"
+            },
+            "enquiry[usermessage]": "Please enter a message",
+            "enquiry[spamCheck]": "Are you human?"
+        },
+        errorPlacement: function (error, element) {
+            if (element.is(":radio")) {
+                error.appendTo(element.parent().parent());
+            }
+            else if (element.is(":checkbox")) {
+                error.appendTo(element.parents('.form-row.form-checkbox-row'));
+            }
+            else {
+                error.insertAfter(element);
+                error.appendTo(element.parents('div.form-input'));
+            }
+        },
+        highlight: function (element) {
+            if ($(element).is(":radio")) {
+                $(element).parent().addClass("error");
+            }
+            else if ($(element).is(":checkbox")) {
+                $(element).parent().addClass("error");
+            }
+            else {
+                $(element).addClass("error");
+            }
+            $(element).parents('.form-row').addClass('error');
+        },
+        unhighlight: function (element) {
+            if ($(element).is(":radio")) {
+                $(element).parent().removeClass("error");
+            }
+            else if ($(element).is(":checkbox")) {
+                $(element).parent().removeClass("error");
+            }
+            else {
+                $(element).removeClass("error");
+            }
+            $(element).parents('.form-row').removeClass('error');
+        },
+        submitHandler: function (form) {
+            var $url = $(form).attr('action');
+            var $method = $(form).attr('method');
+            var $data = $(form).serialize();
+            var jqxhr = $.ajax({
+                type: $method,
+                url: $url,
+                data: $data,
+                dataType: 'json',
+                success: function (response) {
+                    if ('success' === response.status) {
+                        $('form').hide();
+                        $('#msg').addClass('success').html(response.message).fadeIn('slow');
+                    } else {
+                        $('#msg').addClass('error').html(response.message).delay(5000).fadeOut('slow');
+                    }
+                }
+            });
+
+            jqxhr.always(function (response) {
+                console.log(response)
+            })
+        }
     })
 });
