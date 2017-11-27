@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44d01e6e-efeb-4260-9f0a-32e34c5aedec" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Escapism/DefaultBundle/Service/AbstractMailer.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Escapism/DefaultBundle/Service/Mailer.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Escapism/DefaultBundle/Service/MailerInterface.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change beforePath="$PROJECT_DIR$/app/config/config_dev.yml" afterPath="$PROJECT_DIR$/app/config/config_dev.yml" />
-      <change beforePath="$PROJECT_DIR$/app/config/services.yml" afterPath="$PROJECT_DIR$/app/config/services.yml" />
-      <change beforePath="$PROJECT_DIR$/src/Escapism/DefaultBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/Escapism/DefaultBundle/Controller/DefaultController.php" />
+      <change beforePath="$PROJECT_DIR$/src/Escapism/DefaultBundle/Resources/public/css/about.css" afterPath="$PROJECT_DIR$/src/Escapism/DefaultBundle/Resources/public/css/about.css" />
+      <change beforePath="$PROJECT_DIR$/src/Escapism/DefaultBundle/Resources/public/css/brands.css" afterPath="$PROJECT_DIR$/src/Escapism/DefaultBundle/Resources/public/css/brands.css" />
+      <change beforePath="$PROJECT_DIR$/src/Escapism/DefaultBundle/Resources/public/css/contact.css" afterPath="$PROJECT_DIR$/src/Escapism/DefaultBundle/Resources/public/css/contact.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,103 +34,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Escapism/DefaultBundle/Resources/public/js/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
-              <caret line="176" column="6" lean-forward="false" selection-start-line="176" selection-start-column="6" selection-end-line="176" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Escapism/DefaultBundle/Controller/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="133" column="33" lean-forward="false" selection-start-line="133" selection-start-column="33" selection-end-line="133" selection-end-column="33" />
+            <state relative-caret-position="289">
+              <caret line="140" column="33" lean-forward="false" selection-start-line="140" selection-start-column="33" selection-end-line="140" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config_dev.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
+      <file leaf-file-name="about.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Escapism/DefaultBundle/Resources/public/css/about.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
-              <caret line="34" column="1" lean-forward="false" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+            <state relative-caret-position="261">
+              <caret line="15" column="64" lean-forward="false" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Mailer.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Escapism/DefaultBundle/Service/Mailer.php">
+      <file leaf-file-name="brands.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Escapism/DefaultBundle/Resources/public/css/brands.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="35" lean-forward="false" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+            <state relative-caret-position="189">
+              <caret line="15" column="64" lean-forward="false" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractMailer.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Escapism/DefaultBundle/Service/AbstractMailer.php">
+      <file leaf-file-name="contact.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Escapism/DefaultBundle/Resources/public/css/contact.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="41">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding>
-                <element signature="e#50#78#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="services.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/services.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MailerInterface.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Escapism/DefaultBundle/Service/MailerInterface.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="parameters.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MimePart.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/MimePart.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="57" column="20" lean-forward="false" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="20" />
+            <state relative-caret-position="265">
+              <caret line="16" column="64" lean-forward="false" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -230,9 +164,6 @@
         <option value="$PROJECT_DIR$/src/Escapism/DefaultBundle/Resources/views/Default/contact.html.twig" />
         <option value="$PROJECT_DIR$/src/Escapism/DefaultBundle/Resources/views/Default/brands.html.twig" />
         <option value="$PROJECT_DIR$/src/Escapism/DefaultBundle/Resources/views/Default/about.html.twig" />
-        <option value="$PROJECT_DIR$/src/Escapism/DefaultBundle/Resources/public/css/brands.css" />
-        <option value="$PROJECT_DIR$/src/Escapism/DefaultBundle/Resources/public/css/about.css" />
-        <option value="$PROJECT_DIR$/src/Escapism/DefaultBundle/Resources/public/css/contact.css" />
         <option value="$PROJECT_DIR$/src/Escapism/DefaultBundle/Controller/MailControllerTest.php.php" />
         <option value="$PROJECT_DIR$/src/Escapism/DefaultBundle/Service/Mailer.php" />
         <option value="$PROJECT_DIR$/app/config/services.yml" />
@@ -242,6 +173,9 @@
         <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
         <option value="$PROJECT_DIR$/src/Escapism/DefaultBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/src/Escapism/DefaultBundle/Resources/public/css/contact.css" />
+        <option value="$PROJECT_DIR$/src/Escapism/DefaultBundle/Resources/public/css/brands.css" />
+        <option value="$PROJECT_DIR$/src/Escapism/DefaultBundle/Resources/public/css/about.css" />
       </list>
     </option>
   </component>
@@ -255,10 +189,10 @@
     <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2090" />
+  <component name="ProjectFrameBounds" extendedState="4">
+    <option name="x" value="2560" />
     <option name="y" value="24" />
-    <option name="width" value="1429" />
+    <option name="width" value="958" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -345,6 +279,16 @@
               <item name="DefaultBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="wp_symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wp_symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Escapism" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="DefaultBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="wp_symfony" type="b2602c69:ProjectViewProjectNode" />
@@ -442,20 +386,20 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="227692000" />
+    <option name="totallyTimeSpent" value="234898000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1665" y="-4" width="1855" height="1084" extended-state="6" />
+    <frame x="2560" y="24" width="958" height="1056" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24378109" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48355263" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3322546" sideWeight="0.50429183" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3225131" sideWeight="0.49570817" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3322546" sideWeight="0.49570817" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -734,34 +678,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Escapism/DefaultBundle/Resources/public/css/contact.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Escapism/DefaultBundle/Resources/views/Default/brands.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" column="58" lean-forward="false" selection-start-line="11" selection-start-column="54" selection-end-line="12" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Escapism/DefaultBundle/Resources/public/css/brands.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="4" lean-forward="false" selection-start-line="18" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Escapism/DefaultBundle/Resources/public/css/about.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -830,10 +750,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/MimePart.php">
+    <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="57" column="20" lean-forward="false" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="20" />
+        <state relative-caret-position="469">
+          <caret line="34" column="1" lean-forward="false" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -846,28 +766,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Escapism/DefaultBundle/Service/AbstractMailer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41">
+        <state relative-caret-position="73">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
-            <element signature="e#50#78#0#PHP" expanded="true" />
+            <element signature="e#50#78#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
+    <entry file="file://$PROJECT_DIR$/app/config/services.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="34" column="1" lean-forward="false" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+        <state relative-caret-position="252">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -896,10 +808,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/MimePart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="57" column="20" lean-forward="false" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Escapism/DefaultBundle/Resources/public/css/brands.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="15" column="64" lean-forward="false" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Escapism/DefaultBundle/Resources/public/css/contact.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="16" column="64" lean-forward="false" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Escapism/DefaultBundle/Controller/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="133" column="33" lean-forward="false" selection-start-line="133" selection-start-column="33" selection-end-line="133" selection-end-column="33" />
+        <state relative-caret-position="289">
+          <caret line="140" column="33" lean-forward="false" selection-start-line="140" selection-start-column="33" selection-end-line="140" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Escapism/DefaultBundle/Resources/public/css/about.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="15" column="64" lean-forward="false" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
           <folding />
         </state>
       </provider>
