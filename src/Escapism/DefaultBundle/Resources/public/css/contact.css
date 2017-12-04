@@ -32,8 +32,40 @@ div#site-navigation {
     width: 100%;
 }
 
-#contact h2, #contact p {
-    text-align: center;
+#contact-body {
+    margin-bottom: 40px;
+}
+
+#contact {
+    border-right: 1px solid #d2d2d2;
+}
+
+td {
+    vertical-align: top;
+}
+
+.divider {
+    background: #d2d2d2;
+    margin: -20px 30px 20px;
+    width: 100%;
+    height: 1px;
+    display: none;
+}
+
+.map-box {
+    border: 2px solid #000000;
+    overflow: hidden;
+    margin: 10px 0 20px;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-box iframe {
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
 }
 
 .col-sm-4 {
@@ -74,8 +106,14 @@ div#site-navigation {
         padding-bottom: 20px;
         border-bottom: none;
     }
+}
 
-    #about h2, #about p {
-        text-align: center;
+@media only screen and (max-width: 800px) {
+    .divider {
+        display: block;
+    }
+
+    #contact {
+        border-right: none;
     }
 }

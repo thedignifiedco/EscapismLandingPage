@@ -17,23 +17,52 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div id="contact-body" class="row">
                 <div class="col-sm-1"></div>
-                <div class="col-sm-5">
-                    <div id="contact">
-                        <h2>Address</h2>
-                        <p><a href="https://goo.gl/maps/Ge21CopCuKn" target="_blank">Square Up Media<br/>5 Tun Yard<br/>Peardon Street<br/>London<br/>SW8 3HT</a></p>
+                <div id="contact" class="col-sm-5">
+                    <div class="col-sm-12" id="contact-address">
+                        <h2>Get In Touch</h2>
 
-                        <h2>Telephone</h2>
-                        <p><a href="tel:+442078199999" target="_blank">+44 (0) 20 7819 9999</a></p>
-                        <h2>Email</h2>
-                        <p><a href="mailto:info@squareupgroup.com" target="_blank">info@squareupgroup.com</a></p>
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <p><i class="fa fa-map-marker" aria-hidden="true"></i></p>
+                                </td>
+                                <td>
+                                    <p><a href="https://goo.gl/maps/Ge21CopCuKn" target="_blank">Square Up Media, 5 Tun Yard,<br>Peardon Street, London.<br>SW8 3HT</a></p>
+
+                                    <div class="map-box">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d301.836004263682!2d-0.14511639496051482!3d51.46836807767443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487605ab9267ad2b%3A0xe15ba649d20ff714!2sSquare+Up+Media+Ltd!5e0!3m2!1sen!2suk!4v1512382701207" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p><i class="fa fa-phone" aria-hidden="true"></i></p>
+                                </td>
+                                <td>
+                                    <p><a href="tel:+442078199999" target="_blank">+44 (0) 20 7819 9999</a></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p><i class="fa fa-envelope" aria-hidden="true"></i></p>
+                                </td>
+                                <td>
+                                    <p><a href="mailto:info@squareupgroup.com" target="_blank">info@squareupgroup.com</a></p>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
 
+                <div class="divider"></div>
+
                 <div id="about" class="col-sm-5">
                     <h2>Enquiry Form</h2>
-                    <p>Send us a direct message using the form below, and memeber of our team will get in touch with you shortly.</p>
+                    <p>Send us a direct message using the form below, and member of our team will get in touch with you shortly.</p>
 
                     <p id="msg" class=""></p>
                     {{ form(form) }}
